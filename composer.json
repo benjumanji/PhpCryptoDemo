@@ -1,0 +1,22 @@
+{
+  "require": {
+    "brainfoolong/cryptojs-aes-php": "^2.1"
+  },
+  "require-dev": {
+    "ramsey/composer-repl": "^1.5"
+  },
+  "config": {
+    "allow-plugins": {
+      "ramsey/composer-repl": true
+    }
+  },
+  "scripts": {
+    "encrypt": "Hypervolt\\CryptoTest::encrypt",
+    "decrypt": "Hypervolt\\CryptoTest::decrypt"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hypervolt\\": "src/"
+    }
+  }
+}
