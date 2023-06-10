@@ -18,9 +18,7 @@ class CryptoTest {
         $passPhrase = $args[0];
         $json = $args[1];
 
-        $passPhrase = 'hunter2';
-        $value = json_decode($json);
-        echo CryptoJsAes::encrypt($value, $passPhrase);
+        echo CryptoJsAes::encrypt($json, $passPhrase);
         return 0;
     }
 
@@ -36,8 +34,7 @@ class CryptoTest {
         $passPhrase = $args[0];
         $encrypted = $args[1];
 
-        echo json_encode(CryptoJsAes::decrypt($encrypted, $passPhrase)) . PHP_EOL;
-
+        echo CryptoJsAes::decrypt($encrypted, $passPhrase);
         return 0;
     }
 }
